@@ -14,10 +14,8 @@ I would have switched to ggplot for a style sheet, but I had already defined my 
 
 From plot 1 it is clear that the temperature is higher closer to the equator. 
 
-In plot 2 I had a data item of 300% humidy which is invalid data. 
-
-The other data in plot 2 shows that it is drier near -20 and +(20-40) latitude than it is at the equator. (information gathered from other sources supports this idea since there is a low pressure band around the equator and high pressure at +-30 degrees) I think there is an indication that it is also drier near the poles, but I am assuming that due to a lack of cities near the poles I have a lack of data to confirm this.
+The data in plot 2 shows that it is drier near -20 and +(20-40) latitude than it is at the equator.  I think there is an indication that it is also drier near the poles, but I am assuming that due to a lack of cities near the poles I have a lack of data to confirm this.
 
 In plot 3 The data is spread rather randomly. There do seem to be horizontal lines in the data. To me that would indicate that there is some rounding done on the data. I would guess that there is some subjectivity to measuring the level of cloudiness resulting in the data grouping around more round values.
 
-Due to the limited data near the poles it is hard to conclude, but it would appear in plot 4 that it is more windy at +60 latitude and moving out toward the poles.
+Due to the limited data near the poles it is hard to conclude, but it would appear in plot 4 that it is more windy at +60 and -40 latitude and moving out toward the poles.
