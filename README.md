@@ -1,12 +1,14 @@
+     ANALYSIS BELOW
 # Unit 6 | Assignment - What's the Weather Like?
 
-This Jupyter Notebook will visualize the weather of 500+ cities across the world of varying distance from the equator. Cities are chosen randomly by longitude and latitude. Current weather is used for data. Using scatter plots it will show the folowing relationships
+This Jupyter Notebook will visualize the weather of 500+ cities across the world at varying distances from the equator. Cities are chosen randomly by longitude and latitude. Current weather is used for data. Using scatter plots it will show the following relationships
 * 1-Temperature (F) vs. Latitude
 * 2-Humidity (%) vs. Latitude
 * 3-Cloudiness (%) vs. Latitude
 * 4-Wind Speed (mph) vs. Latitude
 
 It uses Python Citipy and the OpenWeatherMap API for data
+
 # Plotting
 I would have switched to ggplot for a style sheet, but I had already defined my own function for graphing consistency so I wanted to use it. 
 
