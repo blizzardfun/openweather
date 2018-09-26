@@ -1,55 +1,23 @@
 # Unit 6 | Assignment - What's the Weather Like?
 
-## Background
+This Jupyter Notebook will visualize the weather of 500+ cities across the world of varying distance from the equator. Cities are chosen randomly by longitude and latitude. Current weather is used for data. Using scatter plots it will show the folowing relationships
+* 1-Temperature (F) vs. Latitude
+* 2-Humidity (%) vs. Latitude
+* 3-Cloudiness (%) vs. Latitude
+* 4-Wind Speed (mph) vs. Latitude
 
-Whether financial, political, or social -- data's true power lies in its ability to answer questions definitively. So let's take what you've learned about Python requests, APIs, and JSON traversals to answer a fundamental question: "What's the weather like as we approach the equator?"
+It uses Python Citipy and the OpenWeatherMap API for data
+# Plotting
+I would have switched to ggplot for a style sheet, but I had already defined my own function for graphing consistency so I wanted to use it. 
 
-Now, we know what you may be thinking: _"Duh. It gets hotter..."_
+# Analysis
 
-But, if pressed, how would you **prove** it?
+From plot 1 it is clear that the temperature is higher closer to the equator. 
 
-![Equator](Images/equatorsign.png)
+In plot 2 I had a data item of 300% humidy which is invalid data. 
 
-## WeatherPy
+The other data in plot 2 shows that it is drier near -20 and +(20-40) latitude than it is at the equator. (information gathered from other sources supports this idea since there is a low pressure band around the equator and high pressure at +-30 degrees) I think there is an indication that it is also drier near the poles, but I am assuming that due to a lack of cities near the poles I have a lack of data to confirm this.
 
-In this example, you'll be creating a Python script to visualize the weather of 500+ cities across the world of varying distance from the equator. To accomplish this, you'll be utilizing a [simple Python library](https://pypi.python.org/pypi/citipy), the [OpenWeatherMap API](https://openweathermap.org/api), and a little common sense to create a representative model of weather across world cities.
+In plot 3 The data is spread rather randomly. There do seem to be horizontal lines in the data. To me that would indicate that there is some rounding done on the data. I would guess that there is some subjectivity to measuring the level of cloudiness resulting in the data grouping around more round values.
 
-Your objective is to build a series of scatter plots to showcase the following relationships:
-
-* Temperature (F) vs. Latitude
-* Humidity (%) vs. Latitude
-* Cloudiness (%) vs. Latitude
-* Wind Speed (mph) vs. Latitude
-
-Your final notebook must:
-
-* Randomly select **at least** 500 unique (non-repeat) cities based on latitude and longitude.
-* Perform a weather check on each of the cities using a series of successive API calls.
-* Include a print log of each city as it's being processed with the city number and city name.
-* Save both a CSV of all data retrieved and png images for each scatter plot.
-
-As final considerations:
-
-* You must complete your analysis using a Jupyter notebook.
-* You must use the Matplotlib or Pandas plotting libraries.
-* You must include a written description of three observable trends based on the data.
-* You must use proper labeling of your plots, including aspects like: Plot Titles (with date of analysis) and Axes Labels.
-* See [Example Solution](WeatherPy_Example.pdf) for a reference on expected format.
-
-## Hints and Considerations
-
-* You may want to start this assignment by refreshing yourself on the [geographic coordinate system](http://desktop.arcgis.com/en/arcmap/10.3/guide-books/map-projections/about-geographic-coordinate-systems.htm).
-
-* Next, spend the requisite time necessary to study the OpenWeatherMap API. Based on your initial study, you should be able to answer  basic questions about the API: Where do you request the API key? Which Weather API in particular will you need? What URL endpoints does it expect? What JSON structure does it respond with? Before you write a line of code, you should be aiming to have a crystal clear understanding of your intended outcome.
-
-* A starter code for Citipy has been provided. However, if you're craving an extra challenge, push yourself to learn how it works: [citipy Python library](https://pypi.python.org/pypi/citipy). Before you try to incorporate the library into your analysis, start by creating simple test cases outside your main script to confirm that you are using it correctly. Too often, when introduced to a new library, students get bogged down by the most minor of errors -- spending hours investigating their entire code -- when, in fact, a simple and focused test would have shown their basic utilization of the library was wrong from the start. Don't let this be you!
-
-* Part of our expectation in this challenge is that you will use critical thinking skills to understand how and why we're recommending the tools we are. What is Citipy for? Why would you use it in conjunction with the OpenWeatherMap API? How would you do so?
-
-* In building your script, pay attention to the cities you are using in your query pool. Are you getting coverage of the full gamut of latitudes and longitudes? Or are you simply choosing 500 cities concentrated in one region of the world? Even if you were a geographic genius, simply rattling 500 cities based on your human selection would create a biased dataset. Be thinking of how you should counter this. (Hint: Consider the full range of latitudes).
-
-* Lastly, remember -- this is a challenging activity. Push yourself! If you complete this task, then you can safely say that you've gained a strong mastery of the core foundations of data analytics and it will only go better from here. Good luck!
-
-## Copyright
-
-Data Boot Camp © 2018. All Rights Reserved.
+Due to the limited data near the poles it is hard to conclude, but it would appear in plot 4 that it is more windy at +60 latitude and moving out toward the poles.
